@@ -1,0 +1,26 @@
+/*css para aba de legenda dos leaflet */
+/*div.info.legenda.leaflet-control br {clear: both;}*/
+
+.legenda {
+  line-height: 18px;
+  color: #555;
+}
+.legenda svg text {
+  fill: #555;
+}
+
+.legenda svg line {
+  stroke: #555;
+}
+.legenda i {
+  width: 18px;
+  height: 18px;
+  margin-right: 4px;
+  opacity: 0.7;
+  display: inline-block;
+  vertical-align: top;
+  /*For IE 7*/
+  zoom: 1;
+  *display: inline;
+}
+
