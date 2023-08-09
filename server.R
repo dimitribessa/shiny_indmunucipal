@@ -270,25 +270,24 @@ server <- shinyServer(function(input, output, session) {
  
  
  #stacked area (pibs)
+ #atualizado em 09-ago023 (trocado)
  output$area  <- renderEcharts({
                          Sys.sleep(.3)
                          dadoi <- dado_municipio3()
                          serie  <- lapply(split(dadoi, dadoi$municipio), function(x){
                                           list(name = x$municipio[1],
-                                               type = 'line',
-                                               stack = 'Total',
-                                               areaStyle = 'null',
-                                               emphasis = list(focus = 'series'),
                                                data = round(x[,4],2))
                                           }) %>% unname
                          
                          list(
-                              tooltip = list(trigger = 'axis'),
-                              
-                              legend = list(data = unique(dadoi$municipio)),
-                              xAxis = list(type = 'category',
-                                           data = unique(dadoi$ano)),
-                              yAxis = list(type = 'value'),
+                              chart = list(
+                                   type  ='area',
+                                   height = '100%'
+                              ),
+                              dataLabels = list(enabled = FALSE),
+                              stroke = list(curve = 'straight'),
+                              xaxis = list(categories = unique(dadoi$ano)),
+                              yaxis = list(opposite = TRUE),
                               series = serie                          
                               
                               )            

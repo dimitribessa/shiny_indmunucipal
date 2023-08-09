@@ -1,5 +1,6 @@
  #tratando dados (03-jun-2023, 10:38h)
  
+ itens_serie <- c('Agropecuária', 'Indústria', 'Serviços', 'Adm. Pública', 'Impostos','PIB')
  names(pops) <- tolower(names(pops))
  
  pops$população <- as.numeric(pops$população)

@@ -1,6 +1,6 @@
 #app indicadores municipais (30-maio-2023, 22:42h)
 #TODO modularizar as os cards (03-jun-2023, 1057h)
-itens_serie <- c('Agropecuária', 'Indústria', 'Serviços', 'Adm. Pública', 'Impostos','PIB')
+
 ui <-
   #abas para as diversas páginas
   tags$html(
@@ -112,14 +112,13 @@ ui <-
         tags$div(class = 'card-header',style = 'display:flex;   justify-content:space-between;',
                  h5('Série de PIB/Valor Adicionado*') ,
                  selectInput('variavell', label = NULL,
-                  choices = itens_serie, 
-                  selected = 'PIB', multiple = F,
-                  width = '10rem')
+                  choices =  c('Agropecuária', 'Indústria', 'Serviços', 'Adm. Pública', 'Impostos','PIB'),#itens_serie, 
+                  selected = 'PIB', multiple = F)
                 ),
          tags$div(style = 'padding: 15px;',
-         echartsOutput('area', height = '380px', width = '100%'),
-          p('*a preços constantes de 2022, deflacionado pelo IPCA.')#,
-          #verbatimTextOutput('teste')
+         apexchartOutput('area', height = '380px', width = '100%'),
+         br(),br(),
+          p('*a preços constantes de 2022, deflacionado pelo IPCA.')
           ))),
           
    column(3,
