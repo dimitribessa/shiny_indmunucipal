@@ -7,7 +7,7 @@ ui <-
   #fluidPage(
    #theme = bslib::bs_theme(version = 5), #incorporando o Bootstrap5
          tags$head(
-         tags$title("Indicadores município"),
+         tags$title("Using MDB Template"),
          HTML('<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">'),
          tags$meta(charset="utf-8")
       ),  #head
@@ -18,8 +18,8 @@ ui <-
         HTML('<div class="container-fluid">
     <a class="navbar-brand" href="#">
       <img
-          src="./images/seplan.png"
-          height="60"
+          src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
+          height="auto"
           alt="MDB Logo"
           loading="lazy"
         />
