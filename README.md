@@ -7,6 +7,8 @@
 The main goal of this project is to share a example of Shiny aplication using [MDB](https://mdbootstrap.com/) bootstrap as a front-end framework.
 The graphs have been created utilizing _echarts_ and _apexcharts_ JS libraries.
 
+You can access a running app [here](http://142.93.67.223/shiny/shiny_mdb/)
+
 Bellow shows the manner how this page is structured
 
 ```
